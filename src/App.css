@@ -1,0 +1,14 @@
+@import "./Constant.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+  background: var(--bg-color);
+}
