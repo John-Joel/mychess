@@ -1,3 +1,4 @@
+import { Status } from "../Constant";
 import actionTypes from "./ActionType"
 
 export const reducer = (state,action) => {
@@ -30,6 +31,30 @@ export const reducer = (state,action) => {
             return {
                 ...state,
                 candidateMoves : []
+            }
+        }
+        case actionTypes.PROMOTION_OPEN : {
+            return {
+                ...state,
+                status : Status.promoting,
+                promotionSquare : {...action.payload}
+            }
+        }
+        case actionTypes.PROMOTION_CLOSE : {
+            return {
+                ...state,
+                status : Status.ongoing,
+                promotionSquare : null
+            }
+        }
+        case actionTypes.CAN_CASTLE : {
+
+            let{turn , castleDirection} = state
+            castleDirection[turn] = action.payload
+
+            return {
+                ...state,
+                castleDirection,
             }
         }
         default : return state

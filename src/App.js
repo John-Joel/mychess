@@ -4,7 +4,7 @@ import Board from './Components/Board/Board';
 import AppContext from './Contexts/Context';
 import { initGameState } from './Constant';
 import { reducer } from './Reducer/Reducer';
-
+  
 function App() {
   const [appState, dispatch ] = useReducer(reducer,initGameState);
 
