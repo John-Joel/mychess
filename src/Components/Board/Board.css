@@ -16,17 +16,17 @@
 }
 
 .tile--light {
-    background: var(--light-tile);
+    background-color: var(--light-tile);
 }
 
 .tile--dark {
-    background: var(--dark-tile);
+    background-color: var(--dark-tile);
 }
 
 .highlight:after {
-    content: '';
     display: block;
     position: absolute;
+    content: '';
     width: calc(.5*var(--tile-size));
     height: calc(.5*var(--tile-size));
     background: var(--highlight);
@@ -36,25 +36,25 @@
 }
 
 .attacking:after {
-    content: '';
     display: block;
     position: absolute;
+    content: '';
+    border: 6px solid var(--highlight);
     width: calc(var(--tile-size) - 12px);
     height: calc(var(--tile-size) - 12px);
     border-radius: 50%;
     left: 0;
     top: 0;
-    border: 6px solid var(--highlight);
 }
 
 .checked:after {
-    content: '';
     display: block;
     position: absolute;
+    content: '';
     width: var(--tile-size);
     height: var(--tile-size);
     background: var(--check);
-    border-radius: 20%;
+    border-radius: 20px;
     left: 0;
     top: 0;
 }
